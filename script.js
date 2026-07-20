@@ -180,3 +180,52 @@ document.getElementById("loader").style.display="none";
 
 
 });
+
+
+
+async function askLTechAI(){
+
+const input =
+document.getElementById("aiInput").value;
+
+
+const answer =
+document.getElementById("aiAnswer");
+
+
+answer.innerHTML="Thinking...";
+
+
+try{
+
+const response = await fetch("/api/chat",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+message:input
+})
+
+});
+
+
+const data = await response.json();
+
+
+answer.innerHTML=data.reply;
+
+
+}
+
+catch(error){
+
+answer.innerHTML=
+"Error connecting AI";
+
+}
+
+}
