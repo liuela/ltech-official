@@ -759,3 +759,35 @@ font-size:1.8rem;
 }
 
 }
+
+
+.social-links {
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+
+.social-links a {
+    width:50px;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+
+.social-links img {
+    width:28px;
+    height:28px;
+}
+
+
+.social-links a:hover {
+    transform:translateY(-8px) scale(1.1);
+}
