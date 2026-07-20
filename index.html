@@ -4,380 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>L Tech | Cybersecurity & Technology</title>
+<title>L Tech | Digital Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#000000;
-    color:#fff;
-}
-
-a{
-    text-decoration:none;
-    color:white;
-}
-
-/* NAVBAR */
-
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    backdrop-filter:blur(15px);
-    background:rgba(18,18,18,0.7);
-    border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:15px 25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.logo{
-    width:55px;
-    height:55px;
-    object-fit:contain;
-    border-radius:50%;
-}
-
-.nav-links a{
-    margin-left:20px;
-    color:#fff;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#00E676;
-}
-
-
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:100px 20px;
-}
-
-.hero img{
-    width:140px;
-    animation:float 3s infinite ease-in-out;
-}
-
-@keyframes float{
-    50%{
-        transform:translateY(-15px);
-    }
-}
-
-.hero h1{
-    font-size:55px;
-    margin:20px 0;
-}
-
-.hero span{
-    color:#00E676;
-}
-
-.hero p{
-    max-width:650px;
-    margin:auto;
-    color:#bbb;
-    font-size:18px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 35px;
-    background:#00E676;
-    color:#000;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-
-/* SECTIONS */
-
-section{
-    padding:80px 20px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.title{
-    text-align:center;
-    font-size:35px;
-    margin-bottom:40px;
-    color:#00E676;
-}
-
-
-/* ABOUT */
-
-.about{
-    text-align:center;
-    color:#ccc;
-    line-height:1.8;
-    max-width:800px;
-}
-
-
-/* PROJECTS */
-
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
-    border-radius:20px;
-    padding:25px;
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    border-color:#00E676;
-}
-
-.card h3{
-    color:#00E676;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#ccc;
-}
-
-.card a{
-    display:inline-block;
-    margin-top:15px;
-    color:#00E676;
-}
-
-
-/* SOCIAL */
-
-.socials{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.social{
-    padding:15px 25px;
-    border-radius:30px;
-    background:#1f1f1f;
-    border:1px solid #333;
-    transition:.3s;
-}
-
-.social:hover{
-    background:#00E676;
-    color:#000;
-}
-
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:30px;
-    color:#777;
-}
-
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-.hero h1{
-    font-size:38px;
-}
-
-.nav-links{
-    display:none;
-}
-
-}
-
-</style>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
-
 <body>
 
-
 <header>
-
-<div class="navbar">
-
 <img src="logo.png" class="logo">
 
-<div class="nav-links">
+<nav>
+<a href="#home">Home</a>
 <a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#social">Social</a>
-</div>
-
-</div>
+<a href="#services">Services</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</nav>
 
 </header>
 
 
-
-<!-- HERO -->
-
-<div class="hero">
+<section id="home" class="hero">
 
 <div>
-
-<img src="logo.png">
-
 <h1>
-Welcome to <span>L Tech</span>
+Build Your Digital Future With 
+<span>L Tech</span>
 </h1>
 
 <p>
-Exploring Cybersecurity, Web Development, Programming,
-AI tools, and advanced technology solutions.
+Professional Web Development, Cybersecurity,
+Programming and Technology Solutions.
 </p>
 
-
-<a href="#projects" class="btn">
-View My Work
+<a href="#contact" class="btn">
+Start Project
 </a>
 
 </div>
 
-</div>
+<img src="logo.png" class="hero-logo">
+
+</section>
 
 
-
-<!-- ABOUT -->
 
 <section id="about">
 
-<h2 class="title">About L Tech</h2>
+<h2>What is L Tech?</h2>
 
-<p class="about">
-
-L Tech is a technology hub focused on programming,
-ethical hacking, cybersecurity education, mobile and PC
-tips, AI tools, and modern web development.
-Our mission is to share powerful technology knowledge
-and create innovative digital projects.
-
+<p>
+L Tech is a modern Ethiopian technology brand
+focused on creating professional websites,
+digital solutions, programming projects,
+cybersecurity education and technology services.
 </p>
 
 </section>
 
 
 
+<section id="services">
 
-<!-- PROJECTS -->
+<h2>Our Services</h2>
 
-<section id="projects">
-
-<h2 class="title">
-Projects
-</h2>
-
-
-<div class="projects">
-
+<div class="cards">
 
 <div class="card">
-
-<h3>Maki Coffee</h3>
-
+<i class="fa-solid fa-code"></i>
+<h3>Web Development</h3>
 <p>
-Modern cafe website and digital experience project.
+Modern responsive websites for businesses.
 </p>
-
-<a href="#">
-GitHub Link →
-</a>
-
 </div>
 
 
-
 <div class="card">
-
-<h3>Delight Hotel</h3>
-
+<i class="fa-solid fa-shield-halved"></i>
+<h3>Cybersecurity</h3>
 <p>
-Responsive hotel management and booking website concept.
+Security awareness and digital protection.
 </p>
-
-<a href="#">
-GitHub Link →
-</a>
-
 </div>
 
 
-
 <div class="card">
-
-<h3>Cyber Security Lab</h3>
-
+<i class="fa-solid fa-mobile"></i>
+<h3>Technology</h3>
 <p>
-Ethical hacking learning tools and security experiments.
+Mobile and PC technology solutions.
 </p>
-
-<a href="#">
-GitHub Link →
-</a>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>AI Tech Tools</h3>
-
-<p>
-Projects exploring artificial intelligence and automation.
-</p>
-
-<a href="#">
-GitHub Link →
-</a>
-
 </div>
 
 
@@ -388,64 +109,148 @@ GitHub Link →
 
 
 
+<section id="pricing">
 
-<!-- SOCIAL -->
-
-<section id="social">
-
-<h2 class="title">
-Connect With Me
-</h2>
+<h2>L Tech Packages</h2>
 
 
-<div class="socials">
-
-<a class="social" href="https://www.youtube.com/@liula22">
-YouTube
-</a>
+<div class="cards">
 
 
-<a class="social" href="https://www.tiktok.com/@liula22">
-TikTok
-</a>
+<div class="price card">
+
+<h3>Starter</h3>
+
+<h1>
+5,000 - 10,000 ETB
+</h1>
+
+<p>
+✔ Personal Portfolio<br>
+✔ Mini Shops<br>
+✔ 1-5 Pages Website<br>
+✔ Modern UI Design<br>
+✔ Mobile Responsive<br>
+✔ Social Media Integration
+</p>
+
+</div>
 
 
-<a class="social" href="https://t.me/liuel12">
-Telegram
-</a>
+
+<div class="price card popular">
+
+<h3>Business</h3>
+
+<h1>
+12,000 - 30,000 ETB
+</h1>
+
+<p>
+✔ Company Websites<br>
+✔ Cafes & Hotels<br>
+✔ Product Section<br>
+✔ Contact Form<br>
+✔ SEO Setup<br>
+✔ Domain Connection
+</p>
+
+</div>
 
 
-<a class="social" href="https://discord.gg/u3wR7cgez">
-Discord
-</a>
 
+<div class="price card">
 
-<a class="social" href="#">
-GitHub
-</a>
+<h3>Premium</h3>
+
+<h1>
+35,000 - 100,000+ ETB
+</h1>
+
+<p>
+✔ Web Applications<br>
+✔ Dashboard<br>
+✔ Login System<br>
+✔ Database<br>
+✔ Payment Integration
+</p>
+
+</div>
 
 
 </div>
 
 </section>
 
+
+
+<section id="portfolio">
+
+<h2>My Portfolio</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Projects</h3>
+<p>
+Website designs, applications and technology projects.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section id="contact">
+
+<h2>Follow L Tech</h2>
+
+
+<div class="social">
+
+<a href="YOUR_TIKTOK_LINK">
+<i class="fab fa-tiktok"></i>
+</a>
+
+
+<a href="YOUR_YOUTUBE_LINK">
+<i class="fab fa-youtube"></i>
+</a>
+
+
+<a href="YOUR_TELEGRAM_LINK">
+<i class="fab fa-telegram"></i>
+</a>
+
+
+<a href="YOUR_GITHUB_LINK">
+<i class="fab fa-github"></i>
+</a>
+
+
+<a href="YOUR_DISCORD_LINK">
+<i class="fab fa-discord"></i>
+</a>
+
+
+</div>
+
+
+</section>
 
 
 
 <footer>
 
-© 2026 L Tech | Technology • Security • Innovation
+© 2026 L Tech. All Rights Reserved.
 
 </footer>
 
 
-
-<script>
-
-console.log("L Tech Website Loaded Successfully");
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 </html>
