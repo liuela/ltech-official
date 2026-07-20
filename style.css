@@ -605,3 +605,157 @@ filter:drop-shadow(0 0 20px #00e676);
 }
 
 }
+
+
+
+/* =========================
+   L Tech AI Assistant Style
+========================= */
+
+#ai-assistant{
+
+padding:80px 20px;
+text-align:center;
+
+}
+
+
+#ai-assistant h2{
+
+font-size:2.2rem;
+margin-bottom:30px;
+
+color:#fff;
+
+}
+
+
+
+.chat-box{
+
+max-width:600px;
+margin:auto;
+
+background:rgba(255,255,255,0.08);
+
+border:1px solid rgba(0,230,118,0.3);
+
+border-radius:20px;
+
+padding:25px;
+
+backdrop-filter:blur(15px);
+
+box-shadow:0 0 30px rgba(0,230,118,0.15);
+
+}
+
+
+
+#aiAnswer{
+
+min-height:80px;
+
+background:#0d0d0d;
+
+border-radius:15px;
+
+padding:20px;
+
+margin-bottom:20px;
+
+text-align:left;
+
+color:#ddd;
+
+line-height:1.6;
+
+}
+
+
+
+#aiInput{
+
+width:75%;
+
+padding:15px;
+
+border-radius:30px;
+
+border:1px solid #00e676;
+
+background:#121212;
+
+color:white;
+
+outline:none;
+
+font-size:16px;
+
+}
+
+
+
+.chat-box button{
+
+padding:15px 25px;
+
+margin-left:10px;
+
+border:none;
+
+border-radius:30px;
+
+background:#00e676;
+
+color:#000;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+
+.chat-box button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #00e676;
+
+}
+
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+#aiInput{
+
+width:100%;
+
+margin-bottom:15px;
+
+}
+
+
+.chat-box button{
+
+width:100%;
+
+margin-left:0;
+
+}
+
+
+#ai-assistant h2{
+
+font-size:1.8rem;
+
+}
+
+}
