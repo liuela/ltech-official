@@ -1,176 +1,309 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+    scroll-behavior:smooth;
 }
 
 
 body{
-
-background:#121212;
-color:white;
-
+    background:#121212;
+    color:white;
+    overflow-x:hidden;
 }
 
 
+/* Header */
+
 header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(18,18,18,0.7);
+    backdrop-filter:blur(15px);
+    z-index:1000;
 }
 
 
 .logo{
-
-width:70px;
-
+    width:70px;
+    height:70px;
+    object-fit:contain;
 }
 
 
 nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    transition:.3s;
+}
 
-color:white;
-text-decoration:none;
-margin:15px;
+
+nav a:hover{
+    color:#00e676;
+}
+
+
+
+/* Hero */
+
+.hero{
+
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:100px 8%;
 
 }
 
 
-.hero{
-
-min-height:90vh;
-display:flex;
-align-items:center;
-justify-content:space-around;
-padding:50px;
-
+.hero-text{
+    max-width:600px;
+    animation:slideLeft 1s;
 }
 
 
 .hero h1{
 
-font-size:50px;
+    font-size:55px;
+    line-height:1.2;
 
 }
 
 
-span{
+.hero span{
 
-color:#00e676;
+    color:#00e676;
+
+}
+
+
+.hero p{
+
+    margin-top:20px;
+    font-size:20px;
+    color:#ccc;
 
 }
 
-
-.hero-logo{
-
-width:250px;
-
-animation:float 3s infinite;
-
-}
 
 
 .btn{
 
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#00e676;
-color:black;
-border-radius:30px;
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:#00e676;
+    color:black;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.4s;
 
 }
 
+
+.btn:hover{
+
+    transform:scale(1.1);
+    box-shadow:0 0 30px #00e676;
+
+}
+
+
+
+.hero-image img{
+
+    width:300px;
+    animation:floating 3s infinite;
+
+}
+
+
+
+/* Sections */
 
 section{
 
-padding:70px 8%;
-text-align:center;
+    padding:90px 8%;
+    text-align:center;
+
+}
+
+
+section h2{
+
+    font-size:40px;
+    margin-bottom:40px;
+    color:#00e676;
+
+}
+
+
+section p{
+
+    color:#ccc;
+    font-size:18px;
 
 }
 
 
 
-.cards{
+/* Cards */
 
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
+.grid{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
 
 }
 
 
 .card{
 
-background:#1e1e1e;
-padding:30px;
-border-radius:20px;
-width:300px;
-
-transition:.4s;
+    width:320px;
+    padding:30px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    transition:.5s;
 
 }
 
 
 .card:hover{
 
-transform:translateY(-15px);
-
-}
-
-
-.popular{
-
-border:2px solid #00e676;
+    transform:translateY(-15px);
+    border-color:#00e676;
+    box-shadow:0 0 25px rgba(0,230,118,.3);
 
 }
 
 
 
-.social i{
+.card i{
 
-font-size:35px;
-margin:20px;
-color:#00e676;
-
-}
-
-
-footer{
-
-padding:20px;
-text-align:center;
+    font-size:40px;
+    color:#00e676;
+    margin-bottom:20px;
 
 }
 
 
-@keyframes float{
+.card h3{
 
-50%{
-transform:translateY(-20px);
-}
+    margin-bottom:20px;
 
 }
 
 
-@media(max-width:700px){
+.price h1{
+
+    color:#00e676;
+    font-size:28px;
+    margin:20px 0;
+
+}
+
+
+.featured{
+
+    border:2px solid #00e676;
+    transform:scale(1.05);
+
+}
+
+
+
+/* Animations */
+
+
+@keyframes floating{
+
+    50%{
+        transform:translateY(-25px);
+    }
+
+}
+
+
+
+@keyframes slideLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+
+/* Mobile */
+
+
+@media(max-width:800px){
+
+
+header{
+
+    flex-direction:column;
+
+}
+
+
+nav{
+
+    margin-top:15px;
+
+}
+
+
+nav a{
+
+    margin:5px;
+
+}
+
+
 
 .hero{
 
-flex-direction:column;
+    flex-direction:column;
+    text-align:center;
 
 }
+
 
 
 .hero h1{
 
-font-size:35px;
+    font-size:38px;
 
 }
+
+
+.hero-image img{
+
+    width:200px;
+    margin-top:40px;
+
+}
+
 
 }
