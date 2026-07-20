@@ -307,3 +307,44 @@ nav a{
 
 
 }
+
+.social{
+
+    margin-top:30px;
+
+}
+
+
+.social a{
+
+    color:white;
+    text-decoration:none;
+
+}
+
+
+.social i{
+
+    font-size:45px;
+    margin:15px;
+    transition:.4s;
+
+}
+
+
+.social i:hover{
+
+    color:#00e676;
+    transform:translateY(-10px) scale(1.2);
+
+}
+
+
+footer{
+
+    padding:30px;
+    text-align:center;
+    background:#0b0b0b;
+    color:#aaa;
+
+}
