@@ -1,21 +1,18 @@
 export default async function handler(req, res) {
 
-  // Only POST allowed
   if (req.method !== "POST") {
     return res.status(405).json({
-      reply: "Method not allowed"
+      reply: "Only POST requests allowed"
     });
   }
-
 
   try {
 
     const { message } = req.body;
 
-
     if (!message) {
       return res.status(400).json({
-        reply: "Please enter a question."
+        reply: "Please type a message."
       });
     }
 
@@ -25,7 +22,7 @@ export default async function handler(req, res) {
 
     if (!apiKey) {
       return res.status(500).json({
-        reply: "API key is missing."
+        reply: "Gemini API key missing."
       });
     }
 
@@ -33,91 +30,82 @@ export default async function handler(req, res) {
     const prompt = `
 You are L Tech AI Assistant.
 
-Company:
-L Tech is an Ethiopian technology company providing digital solutions.
+About L Tech:
+L Tech is an Ethiopian technology company.
 
 Services:
 - Website Development
-- Portfolio Websites
 - Business Websites
+- Portfolio Websites
 - E-commerce Websites
 - Web Applications
-- Cybersecurity Awareness
+- Cybersecurity
 - Programming
 - AI Solutions
+
 
 Packages:
 
 Starter:
-Price: 5,000 - 10,000 ETB
-
-Includes:
+5,000 - 10,000 ETB
 - Personal portfolio website
 - Mini shop website
 - Responsive design
-- Mobile friendly
-- Basic animations
-- Contact section
-- Social media integration
-- 1 year free domain if client accepts the offer
+- Basic animation
+- Social media links
+- 1 year free domain if client accepts
 
 
 Business:
-Price: 12,000 - 30,000 ETB
-
-Includes:
+12,000 - 30,000 ETB
 - Company websites
 - Cafe websites
 - Hotel websites
-- Professional UI
-- SEO basics
+- Professional UI design
 - Contact forms
+- SEO basics
 - Domain connection
-- 1 year free domain if client accepts the offer
 
 
 Premium:
-Price: 35,000 - 100,000+ ETB
-
-Includes:
+35,000 - 100,000+ ETB
 - Advanced web applications
 - Dashboards
 - Login systems
-- Database integration
+- Database
 - AI integration
 - Custom features
 
 
 Rules:
 - Answer professionally.
-- Help customers choose packages.
+- Help customers choose L Tech services.
 - Do not create fake prices.
-- If question is not about L Tech, politely say you only help with L Tech.
 
-Customer:
+
+Customer message:
 ${message}
 `;
 
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=" + apiKey,
       {
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
         },
-        body:JSON.stringify({
 
-          contents:[
+        body: JSON.stringify({
+          contents: [
             {
-              parts:[
+              parts: [
                 {
-                  text:prompt
+                  text: prompt
                 }
               ]
             }
           ]
-
         })
       }
     );
@@ -127,11 +115,9 @@ ${message}
 
 
     if (!response.ok) {
-
       return res.status(500).json({
-        reply: data.error?.message || "Gemini error"
+        reply: data.error?.message || "Gemini API error"
       });
-
     }
 
 
@@ -140,11 +126,11 @@ ${message}
 
 
     return res.status(200).json({
-      reply: answer || "No answer received."
+      reply: answer || "No response from AI."
     });
 
 
-  } catch(error){
+  } catch (error) {
 
     return res.status(500).json({
       reply: error.message
