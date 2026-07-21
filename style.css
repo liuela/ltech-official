@@ -791,3 +791,13 @@ font-size:1.8rem;
 .social-links a:hover {
     transform:translateY(-8px) scale(1.1);
 }
+
+
+
+textarea {
+    width: 100%;
+    min-height: 220px;
+    resize: vertical;
+    padding: 15px;
+    border-radius: 12px;
+}
